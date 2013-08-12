@@ -5,7 +5,7 @@ require 'rack-strip-empty-session/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-strip-empty-session"
-  spec.version       = Rack::Strip::Empty::Session::VERSION
+  spec.version       = Rack::StripEmptySession::VERSION
   spec.authors       = ["Brian Racer"]
   spec.email         = ["bracer@gmail.com"]
   spec.summary       = %q{Rack middleware which strips the Rails session cookie if no custom data has been added to that session}
