@@ -1,9 +1,10 @@
 # Rack::StripEmptySession
 
-Rack middleware which causes Rails to not send a session cookie if no
-custom data has been added to the session.
+Rack middleware which strips the Rails session cookie if no custom data
+has been added to that session.
 
-Useful when putting your app behind a Varnish cache.
+Useful when putting your app behind a Varnish cache since requests with
+cookies will not be cached.
 
 ## Usage
 
