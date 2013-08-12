@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rack::Strip::Empty::Session::VERSION
   spec.authors       = ["Brian Racer"]
   spec.email         = ["bracer@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.summary       = %q{Rack middleware which strips the Rails session cookie if no custom data has been added to that session}
+  spec.homepage      = "https://github.com/anveo/rack-strip-empty-session"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
