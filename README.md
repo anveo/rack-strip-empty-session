@@ -1,24 +1,26 @@
-# Rack::Strip::Empty::Session
+# Rack::StripEmptySession
 
-TODO: Write a gem description
+Rack middleware which causes Rails to not send a session cookie if no
+custom data has been added to the session.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'rack-strip-empty-session'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rack-strip-empty-session
+Useful when putting your app behind a Varnish cache.
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+gem 'rack-strip-empty-session'
+```
+
+#### Rails
+
+```ruby
+module MyApp
+  class Application < Rails::Application
+    # ...
+    config.middleware.insert_before "ActionDispatch::Cookies", "Rack::StripEmptySessions", :key => "your_secret_key", :path => "/", :httponly => true
+  end
+end
+```
 
 ## Contributing
 
